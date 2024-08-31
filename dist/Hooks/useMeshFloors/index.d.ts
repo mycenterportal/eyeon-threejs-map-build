@@ -1,6 +1,3 @@
-import type { TRoles } from "../../types";
-import { IJsonConfig, IMeshParamsTmp } from "../../types";
-import { MapIt2Response } from "../../mapitApiTypes";
-export declare const textLogoNamePrefix = "custom-layer-";
-declare const useMeshFloors: (data: MapIt2Response | null, jsonConfig?: Partial<IJsonConfig>, role?: TRoles, mediaStorageURI?: string) => IMeshParamsTmp;
+import type { MeshFloorsProps } from "../../interfaces";
+declare const useMeshFloors: () => MeshFloorsProps;
 export default useMeshFloors;

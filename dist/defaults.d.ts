@@ -1,3 +1,8 @@
-import { IJsonConfig } from "./types";
-export declare const mapit2DefaultVars: Partial<IJsonConfig>;
-export declare const defaultVars: IJsonConfig;
+import { MapConfigProps } from "./interfaces";
+import { MapCameraControlsState, MapObjData } from "./interfaces/mapApiTypes";
+import { PortalMapSettingsProps } from "./interfaces/portal";
+export declare const cameraControlsDefaultVars: MapCameraControlsState;
+export declare const defaultPortalMapSettings: PortalMapSettingsProps;
+export declare const mapConfigDefaultVars: MapConfigProps;
+export declare const mapObjDefaultVars: MapObjData;
+export declare const textLogoNamePrefix = "custom-layer-";

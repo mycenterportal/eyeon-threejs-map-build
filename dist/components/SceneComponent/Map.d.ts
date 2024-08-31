@@ -1,10 +1,10 @@
-import { IMeshParams } from "../../types";
+import { MeshFloorsProps } from "../../interfaces";
 import { ThreeEvent } from "@react-three/fiber";
 import { Mesh } from "three";
 interface IMapProps {
     floorIndex: number;
     currentFloorIndex: number;
-    meshFloors: IMeshParams;
+    meshFloors: MeshFloorsProps;
     currKioskObj: Mesh | null;
     activeObjectId?: string;
     hoverObjectId?: string;

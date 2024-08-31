@@ -1,8 +1,8 @@
-import { IConfig } from "src/types";
-export declare const MapCenterMarker: ({ size, lockSize, blink, cameraLength, config }: {
+interface MapCenterMarketProps {
     size: number;
-    lockSize?: boolean | undefined;
+    lockSize?: boolean;
     blink: boolean;
     cameraLength: number | undefined;
-    config: IConfig | undefined;
-}) => import("react/jsx-runtime").JSX.Element | null;
+}
+export declare const MapCenterMarker: ({ size, lockSize, blink, cameraLength }: MapCenterMarketProps) => import("react/jsx-runtime").JSX.Element | null;
+export {};

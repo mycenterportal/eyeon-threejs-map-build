@@ -1,29 +1,58 @@
 import { Dispatch, ReactNode, SetStateAction } from "react";
 import { Graph } from "ngraph.graph";
-import { IRetailer, MapObj } from "src/mapitApiTypes";
-import type { Mesh } from "three";
+import { type Mesh } from "three";
 import path from "ngraph.path";
 import { EventedType } from "ngraph.events";
-import { IFloorData } from "src/types";
-type MapBoxContextType = {
+import { MapConfigProps, IExtMesh } from "src/interfaces";
+import { MapObjData, MapRetailer, MapAllDataResponse, MapKiosk } from "src/interfaces/mapApiTypes";
+import { AppDataProps } from "src/interfaces/mapbox";
+import { AppFloor } from "src/interfaces/mapbox";
+import { ApiServicesProps } from "src/services/index.service";
+interface MapBoxContextType {
+    apiBaseUrl: string;
+    refetchMapData: () => void;
+    apiServices: ApiServicesProps;
+    loading: boolean;
+    setLoading: Dispatch<SetStateAction<boolean>>;
+    initialFloorsDataIsLoaded: boolean;
+    setInitialFloorsDataIsLoaded: Dispatch<SetStateAction<boolean>>;
+    mapConfig: MapConfigProps;
+    setMapConfig: React.Dispatch<React.SetStateAction<MapConfigProps>>;
+    mapApiResponse: MapAllDataResponse;
+    setMapApiResponse: React.Dispatch<React.SetStateAction<MapAllDataResponse>>;
+    appData: AppDataProps;
+    setAppData: React.Dispatch<React.SetStateAction<AppDataProps>>;
     meshByObjectId: Map<string, Mesh>;
-    setMeshByObjectId: Dispatch<SetStateAction<Map<string, Mesh>>> | Function;
+    setMeshByObjectId: Dispatch<SetStateAction<Map<string, Mesh>>>;
     allMapObjects: Array<string>;
-    setAllMapObjects: Dispatch<SetStateAction<Array<string>>> | Function;
-    allIndexedMapObjects: Record<string, MapObj>;
-    setAllIndexedMapObjects: Dispatch<SetStateAction<Record<string, MapObj>>> | Function;
-    allIndexedRetailers: Record<string, IRetailer>;
-    setAllIndexedRetailers: Dispatch<SetStateAction<Record<string, IRetailer>>> | Function;
+    setAllMapObjects: Dispatch<SetStateAction<Array<string>>>;
+    allIndexedMapObjects: Record<string, MapObjData>;
+    setAllIndexedMapObjects: Dispatch<SetStateAction<Record<string, MapObjData>>>;
+    allIndexedRetailers: Record<number, MapRetailer>;
+    setAllIndexedRetailers: Dispatch<SetStateAction<Record<number, MapRetailer>>>;
+    indexedKiosks: Record<number, MapKiosk>;
+    setIndexedKiosks: Dispatch<SetStateAction<Record<number, MapKiosk>>>;
+    floorsData: AppFloor[];
+    setFloorsData: Dispatch<SetStateAction<AppFloor[]>>;
     allNodesFloor: Record<string, number>;
-    setAllNodesFloor: Dispatch<SetStateAction<Record<string, number>>> | Function;
+    setAllNodesFloor: Dispatch<SetStateAction<Record<string, number>>>;
     pathFinderGraph: Graph<any, any> & EventedType;
-    setPathFinderGraph: Dispatch<SetStateAction<Graph<any, any> & EventedType>> | Function;
+    setPathFinderGraph: Dispatch<SetStateAction<Graph<any, any> & EventedType>>;
     ngraphPath: typeof path;
-    setNgraphPath: Dispatch<SetStateAction<typeof path>> | Function;
-    floorsData: IFloorData[];
-};
-declare const MapBoxContextProvider: ({ children }: {
+    setNgraphPath: Dispatch<SetStateAction<typeof path>>;
+    meshObject: IExtMesh[];
+    setMeshObject: React.Dispatch<React.SetStateAction<IExtMesh[]>>;
+    cameraLength: number | undefined;
+    setCameraLength: React.Dispatch<React.SetStateAction<number | undefined>>;
+}
+export interface ProviderInitialData {
+    webApiBaseUrl: string;
+    config: Partial<MapConfigProps>;
+}
+interface MapBoxContextProviderProps {
     children: ReactNode;
-}) => import("react/jsx-runtime").JSX.Element;
+    initialData: ProviderInitialData;
+}
+declare const MapBoxContextProvider: ({ children, initialData }: MapBoxContextProviderProps) => import("react/jsx-runtime").JSX.Element;
 export declare function useMapBoxContext(): MapBoxContextType;
 export default MapBoxContextProvider;
