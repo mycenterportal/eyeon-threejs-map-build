@@ -1,8 +1,8 @@
 import React, { MutableRefObject } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { MapAmenityID } from './helpers/amenities.helper';
 import { MapCameraControlsState, MapObjData } from './interfaces/mapApiTypes';
 import { MapConfigProps } from './interfaces';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/global.scss';
 export type MapBoxRefProps = {
     refreshData: () => void;

@@ -1,13 +1,13 @@
 {
   "name": "eyeon-threejs-map",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "type": "module",
   "source": "src/index.ts",
   "main": "dist/index.js",
   "module": "dist/index.module.js",
   "unpkg": "dist/index.umd.js",
   "scripts": {
-    "build": "microbundle --jsx React.createElement --css-modules true --scss-modules true",
+    "build": "microbundle --jsx React.createElement --css-modules true",
     "dev": "microbundle watch",
     "storybook": "storybook dev -p 6006"
   },
