@@ -1,6 +1,6 @@
 import React, { MutableRefObject } from 'react';
 import { MapAmenityID } from './helpers/amenities.helper';
-import { MapCameraControlsState, MapObjData } from './interfaces/mapApiTypes';
+import { MapAllDataResponse, MapCameraControlsState, MapObjData } from './interfaces/mapApiTypes';
 import { MapConfigProps } from './interfaces';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/global.scss';
@@ -22,6 +22,7 @@ export interface AppProps {
     onResetData?: (data: MapObjData) => void;
     onChangeData?: (data: MapObjData) => void;
     onNewData?: (data: MapObjData) => void;
+    mapApiResponseRef?: MutableRefObject<MapAllDataResponse | null> | undefined;
     onChangeCameraControlPosition?: (cameraControlPos: MapCameraControlsState) => void;
     onExtractedAmenities?: (amenityIds: MapAmenityID[]) => void;
     handleClickOnRetailer?: (slug: string) => void;

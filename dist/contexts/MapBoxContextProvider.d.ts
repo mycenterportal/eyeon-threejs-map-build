@@ -52,7 +52,8 @@ export interface ProviderInitialData {
 interface MapBoxContextProviderProps {
     children: ReactNode;
     initialData: ProviderInitialData;
+    mapApiResponseRef?: React.MutableRefObject<MapAllDataResponse | null>;
 }
-declare const MapBoxContextProvider: ({ children, initialData }: MapBoxContextProviderProps) => import("react/jsx-runtime").JSX.Element;
+declare const MapBoxContextProvider: ({ children, initialData, mapApiResponseRef }: MapBoxContextProviderProps) => import("react/jsx-runtime").JSX.Element;
 export declare function useMapBoxContext(): MapBoxContextType;
 export default MapBoxContextProvider;
