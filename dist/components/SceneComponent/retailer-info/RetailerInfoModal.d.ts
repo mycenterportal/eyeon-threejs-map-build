@@ -1,11 +1,11 @@
 type RetailerInfoModalProps = {
-    amenity: string;
     show: boolean;
     onHide: () => void;
+    amenity: string;
+    selectedAmenityMapObjName: string;
     mapObjectName?: string;
     onClickMapObj: (id: string, amenityType?: string) => void;
-    kioskId: number;
     allSvgObjectIds: Set<string>;
 };
-declare const RetailerInfoModal: ({ amenity, show, onHide, mapObjectName, onClickMapObj, kioskId, allSvgObjectIds }: RetailerInfoModalProps) => import("react/jsx-runtime").JSX.Element;
+declare const RetailerInfoModal: ({ show, onHide, amenity, selectedAmenityMapObjName, mapObjectName, onClickMapObj, allSvgObjectIds }: RetailerInfoModalProps) => import("react/jsx-runtime").JSX.Element;
 export default RetailerInfoModal;

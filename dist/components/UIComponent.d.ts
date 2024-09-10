@@ -8,7 +8,7 @@ export interface UIComponentProps {
     zoomOut?: MouseEventHandler<HTMLDivElement>;
     reset?: (fullReset?: boolean) => void;
     clearRoute?: MouseEventHandler<HTMLDivElement>;
-    handleAmenityClick: (type: string) => void;
+    handleAmenityClick: (type: string, map_obj_name?: string) => void;
     onExtractedAmenities?: (amenityIds: MapAmenityID[]) => void;
 }
 declare const UIComponent: ({ selectedFloorIndex, handleFloorChange, amenitiesList, zoomIn, zoomOut, reset, clearRoute, handleAmenityClick, onExtractedAmenities, }: UIComponentProps) => import("react/jsx-runtime").JSX.Element;

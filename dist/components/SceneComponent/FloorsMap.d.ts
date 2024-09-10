@@ -14,7 +14,7 @@ interface FloorsMapProps {
     currKioskFloorIndex: number;
     routeTargetId?: string;
     routeTargetFromId?: string;
-    amenityTargetType: string;
+    selectedAmenityType: string;
     activeObjectId?: string;
     hoverObjectId?: string;
     handleChangeFloor: (index: number) => void;
