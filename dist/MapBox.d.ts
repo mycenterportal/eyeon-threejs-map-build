@@ -7,7 +7,7 @@ import './styles/global.scss';
 export type MapBoxRefProps = {
     refreshData: () => void;
     createRouteToAmenity: (amenityId: MapAmenityID) => void;
-    createRouteToStore: (retailerSlug: string) => void;
+    createRouteToStore: (retailerId: number) => void;
     getInitialDistance: () => number;
     resetMap: () => void;
     refreshState: () => void;

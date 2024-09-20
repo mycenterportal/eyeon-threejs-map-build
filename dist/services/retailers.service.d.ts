@@ -1,7 +1,10 @@
 import { AxiosInstance } from "axios";
 import { MapRetailer, MapRetailerSingle } from "src/interfaces/mapApiTypes";
 export interface RetailersService {
-    getAllRetailers: () => Promise<MapRetailer[]>;
+    getAllRetailers: () => Promise<{
+        retailers: MapRetailer[];
+        globalRetailerIds: number[];
+    }>;
     getRetailer: (slug: string) => Promise<MapRetailerSingle>;
 }
 declare const createRetailersService: (axiosInstance: AxiosInstance) => RetailersService;

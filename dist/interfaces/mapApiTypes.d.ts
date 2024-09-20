@@ -2,6 +2,7 @@ import { MapAmenityID } from "src/helpers/amenities.helper";
 import { PortalMapSettingsProps } from "./portal";
 export interface MapRetailer {
     id: number;
+    global_retailer_id: number;
     index?: number;
     retail_name: string;
     slug: string;
@@ -65,6 +66,7 @@ export interface MapResponsiveSettings {
 }
 export type MapAllDataResponse = {
     retailers: MapRetailer[];
+    globalRetailerIds: number[];
     map_objs: MapObjData[];
     floors: MapFloor[];
     kiosks: MapKiosk[];

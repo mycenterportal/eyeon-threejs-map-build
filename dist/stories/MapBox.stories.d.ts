@@ -16,6 +16,9 @@ declare const BasicTab: {
 };
 export default BasicTab;
 type BasicTabStory = StoryObj<typeof BasicTab>;
+export declare const DevPortal: BasicTabStory;
+export declare const DevWpSite: BasicTabStory;
+export declare const DevDisplayApp: BasicTabStory;
 export declare const StagingPortal: BasicTabStory;
 export declare const StagingWpSite: BasicTabStory;
 export declare const StagingDisplayApp: BasicTabStory;

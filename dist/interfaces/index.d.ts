@@ -21,7 +21,7 @@ export interface MapConfigProps {
     OVERLAY_OPACITY: number;
     DEFAULT_CAMERA_POSITION: null;
     BOUNDARY_THICKNESS: number;
-    SELECTED_RETAILER_SLUG?: string;
+    SELECTED_RETAILER_ID?: number;
     STORE_TEXT_COLOR: Color;
     STORE_HEIGHT: number;
     WALL_THICKNESS: number;

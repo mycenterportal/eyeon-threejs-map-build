@@ -1,6 +1,6 @@
 {
   "name": "eyeon-threejs-map",
-  "version": "0.1.14",
+  "version": "0.1.15",
   "type": "module",
   "source": "src/index.ts",
   "main": "dist/index.js",
