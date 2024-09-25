@@ -2,7 +2,7 @@ import { SVGResultPaths } from "three-stdlib";
 import { Color } from "three";
 export declare const useMeshParams: () => {
     getMeshParams: (path: SVGResultPaths, paths: SVGResultPaths[], floor_index: number, nodeCount: number) => {
-        mesh_type: "escalator" | "kiosk" | "amenity" | "route-path" | "overlay" | "base" | "store" | "wall" | "outer-wall" | "boundary" | "special-shape" | null;
+        mesh_type: "escalator" | "base" | "kiosk" | "amenity" | "route-path" | "overlay" | "store" | "wall" | "outer-wall" | "boundary" | "special-shape" | null;
         layer_color: Color;
         extrude: number;
         z_index: number;
