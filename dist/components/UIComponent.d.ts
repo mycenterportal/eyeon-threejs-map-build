@@ -11,5 +11,5 @@ export interface UIComponentProps {
     handleAmenityClick: (type: string, map_obj_name?: string) => void;
     onExtractedAmenities?: (amenityIds: MapAmenityID[]) => void;
 }
-declare const UIComponent: ({ selectedFloorIndex, handleFloorChange, amenitiesList, zoomIn, zoomOut, reset, clearRoute, handleAmenityClick, onExtractedAmenities, }: UIComponentProps) => import("react/jsx-runtime").JSX.Element;
+declare const UIComponent: (params: UIComponentProps) => import("react/jsx-runtime").JSX.Element;
 export default UIComponent;
