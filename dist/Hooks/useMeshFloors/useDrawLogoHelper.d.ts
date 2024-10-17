@@ -7,8 +7,8 @@ declare const useDrawLogoHelper: () => {
     addTextOrLogoOnStore: (map_obj: any, scene: Scene, textLogoNamePrefix: string, allIndexedMapObjects: Record<string, MapObjData>, allIndexedRetailers: Record<any, any>, config: Record<any, any>, myFont: any, floors: Record<any, any>[]) => void;
     getMeshGroupBoundingBox: (mesh: Mesh | Array<Mesh>) => Box3;
     layer_text_logo_position_by_id: (object_id: string, newMeshPos: Vector3, mesh_size: Vector3, newMesh: Mesh, allIndexedMapObjects: Record<any, any>) => void;
-    getImage: (map_obj: Record<string, any>, retailer?: MapRetailer) => HTMLImageElement | null;
-    processImage: (img: HTMLImageElement, map_obj: Record<string, any>, afterOnload: (geometry: PlaneGeometry, material: MeshBasicMaterial) => void) => void;
+    getImage: (map_obj: Record<string, any>, retailer?: MapRetailer) => Promise<string>;
+    processImage: (imgUrl: string, map_obj: Record<string, any>, afterOnload: (geometry: PlaneGeometry, material: MeshBasicMaterial) => void) => void;
     getImageLogo: (allIndexedMapObjects: Record<string, MapObjData>, allIndexedRetailers: Record<string, any>, map_obj: Record<string, any>, mesh: BufferGeometry, object_id: string, new_object_id: string | null, mesh_center_point: Vector3, mesh_size: Vector3, floors: any, handleAsync: (meshLogo: {
         storeLogo: Object3D;
     }) => void) => void;

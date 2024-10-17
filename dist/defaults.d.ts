@@ -6,3 +6,4 @@ export declare const defaultPortalMapSettings: PortalMapSettingsProps;
 export declare const mapConfigDefaultVars: MapConfigProps;
 export declare const mapObjDefaultVars: MapObjData;
 export declare const textLogoNamePrefix = "custom-layer-";
+export declare const MapImageQuality = 20;
