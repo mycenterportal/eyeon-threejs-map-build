@@ -11,7 +11,7 @@ interface SceneComponentProps {
     onNewData?: (data: MapObjData) => void;
     onChangeCameraControlPosition?: (cameraControlPos: any) => void;
     onExtractedAmenities?: (amenityIds: MapAmenityID[]) => void;
-    handleClickOnRetailer?: (slug: string) => void;
+    handleClickOnRetailer?: (retailer_id: number) => void;
 }
 export type TFormMapObjData = {
     index: number;

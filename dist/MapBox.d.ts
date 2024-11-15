@@ -25,7 +25,7 @@ export interface AppProps {
     mapApiResponseRef?: MutableRefObject<MapAllDataResponse | null> | undefined;
     onChangeCameraControlPosition?: (cameraControlPos: MapCameraControlsState) => void;
     onExtractedAmenities?: (amenityIds: MapAmenityID[]) => void;
-    handleClickOnRetailer?: (slug: string) => void;
+    handleClickOnRetailer?: (retailer_id: number) => void;
 }
 declare const MapBox: React.ForwardRefExoticComponent<AppProps & React.RefAttributes<unknown>>;
 export default MapBox;
