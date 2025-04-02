@@ -14,6 +14,7 @@ export interface MapConfigProps {
     STYLE: MapRenderMode;
     STATS: boolean;
     DEBUG: boolean;
+    IMAGE_PROXY_URL?: string;
     CAMERA_CONTROLS_STATES: MapResponsiveSettings;
     DEFAULT_CONTROLS_TARGET: null;
     ORIGINAL_CAMERA_POSITION: null;
