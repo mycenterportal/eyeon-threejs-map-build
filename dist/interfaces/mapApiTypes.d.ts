@@ -58,11 +58,22 @@ export type MapCameraControlsState = {
     camera: MapVectorPoint;
     controls: MapVectorPoint;
 };
+export interface FloorMapResponsiveSettings {
+    display_app: MapCameraControlsState;
+    desktop: MapCameraControlsState;
+    tablet: MapCameraControlsState;
+    mobile: MapCameraControlsState;
+    id?: number;
+    floor_id: number;
+}
 export interface MapResponsiveSettings {
     display_app: MapCameraControlsState;
     desktop: MapCameraControlsState;
     tablet: MapCameraControlsState;
     mobile: MapCameraControlsState;
+    perFloor: {
+        [floorId: number]: FloorMapResponsiveSettings;
+    } | null;
 }
 export type MapAllDataResponse = {
     retailers: MapRetailer[];

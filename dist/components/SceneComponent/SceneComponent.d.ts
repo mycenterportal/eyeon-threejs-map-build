@@ -1,6 +1,6 @@
 import React from "react";
 import { MapAmenityID } from "src/helpers/amenities.helper";
-import { MapObjData } from "src/interfaces/mapApiTypes";
+import { MapCameraControlsState, MapObjData, MapResponsiveSettings } from "src/interfaces/mapApiTypes";
 interface SceneComponentProps {
     selectedActiveObjectId: string;
     setSelectedActiveObjectId: React.Dispatch<React.SetStateAction<string>>;
@@ -9,7 +9,7 @@ interface SceneComponentProps {
     onResetData?: (data: MapObjData) => void;
     onChangeData?: (data: MapObjData) => void;
     onNewData?: (data: MapObjData) => void;
-    onChangeCameraControlPosition?: (cameraControlPos: any) => void;
+    onChangeCameraControlPosition?: (mapResponsiveSetings: MapResponsiveSettings, cameraControlPos: MapCameraControlsState, floorId: number | null) => void;
     onExtractedAmenities?: (amenityIds: MapAmenityID[]) => void;
     handleClickOnRetailer?: (retailer_id: number) => void;
 }

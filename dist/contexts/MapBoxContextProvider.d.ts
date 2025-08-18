@@ -5,13 +5,10 @@ import path from "ngraph.path";
 import { EventedType } from "ngraph.events";
 import { MapConfigProps, IExtMesh } from "src/interfaces";
 import { MapObjData, MapRetailer, MapAllDataResponse, MapKiosk } from "src/interfaces/mapApiTypes";
-import { AppDataProps } from "src/interfaces/mapbox";
 import { AppFloor } from "src/interfaces/mapbox";
-import { ApiServicesProps } from "src/services/index.service";
 interface MapBoxContextType {
     apiBaseUrl: string;
     refetchMapData: () => void;
-    apiServices: ApiServicesProps;
     loading: boolean;
     setLoading: Dispatch<SetStateAction<boolean>>;
     initialFloorsDataIsLoaded: boolean;
@@ -20,8 +17,6 @@ interface MapBoxContextType {
     setMapConfig: React.Dispatch<React.SetStateAction<MapConfigProps>>;
     mapApiResponse: MapAllDataResponse;
     setMapApiResponse: React.Dispatch<React.SetStateAction<MapAllDataResponse>>;
-    appData: AppDataProps;
-    setAppData: React.Dispatch<React.SetStateAction<AppDataProps>>;
     meshByObjectId: Map<string, Mesh>;
     setMeshByObjectId: Dispatch<SetStateAction<Map<string, Mesh>>>;
     allMapObjects: Array<string>;

@@ -1,12 +1,5 @@
-import { MapAmenity } from "src/helpers/amenities.helper";
-import { MapFloor, MapKiosk, MapRetailer } from "./mapApiTypes";
+import { MapFloor } from "./mapApiTypes";
 import { Group, Texture, Vector3 } from "three";
-export interface AppDataProps {
-    RETAILERS: Record<number, MapRetailer>;
-    KIOSKS: Record<number, MapKiosk>;
-    FLOORS: AppFloor[];
-    AMENITIES: MapAmenity[];
-}
 export type AppRoutePoint = {
     name: string;
     node: Vector3;
