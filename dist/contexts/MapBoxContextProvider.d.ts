@@ -7,7 +7,7 @@ import { MapConfigProps, IExtMesh } from "src/interfaces";
 import { MapObjData, MapRetailer, MapAllDataResponse, MapKiosk } from "src/interfaces/mapApiTypes";
 import { AppFloor } from "src/interfaces/mapbox";
 import { ApiServicesProps } from "src/services/index.service";
-interface MapBoxContextType {
+export interface MapBoxContextType {
     apiBaseUrl: string;
     refetchMapData: () => void;
     apiServices: ApiServicesProps;
@@ -37,8 +37,14 @@ interface MapBoxContextType {
     setPathFinderGraph: Dispatch<SetStateAction<Graph<any, any> & EventedType>>;
     ngraphPath: typeof path;
     setNgraphPath: Dispatch<SetStateAction<typeof path>>;
-    meshObject: IExtMesh[];
-    setMeshObject: React.Dispatch<React.SetStateAction<IExtMesh[]>>;
+    meshObject: {
+        svgShapeMeshObject: IExtMesh;
+        textImageMeshObject: IExtMesh;
+    } | null;
+    setMeshObject: React.Dispatch<React.SetStateAction<{
+        svgShapeMeshObject: IExtMesh;
+        textImageMeshObject: IExtMesh;
+    } | null>>;
     cameraLength: number | undefined;
     setCameraLength: React.Dispatch<React.SetStateAction<number | undefined>>;
 }
