@@ -6,9 +6,11 @@ import { EventedType } from "ngraph.events";
 import { MapConfigProps, IExtMesh } from "src/interfaces";
 import { MapObjData, MapRetailer, MapAllDataResponse, MapKiosk } from "src/interfaces/mapApiTypes";
 import { AppFloor } from "src/interfaces/mapbox";
+import { ApiServicesProps } from "src/services/index.service";
 interface MapBoxContextType {
     apiBaseUrl: string;
     refetchMapData: () => void;
+    apiServices: ApiServicesProps;
     loading: boolean;
     setLoading: Dispatch<SetStateAction<boolean>>;
     initialFloorsDataIsLoaded: boolean;
