@@ -1,6 +1,6 @@
 {
   "name": "eyeon-threejs-map",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "type": "module",
   "source": "src/index.ts",
   "main": "dist/index.js",
@@ -15,9 +15,7 @@
   "packageManager": "npm@10.9.3",
   "scripts": {
     "build": "vite build --mode lib",
-    "build:app": "vite build --mode app",
     "dev": "vite",
-    "preview": "vite build --mode app && vite preview",
     "storybook": "storybook dev -p 6006"
   },
   "husky": {
