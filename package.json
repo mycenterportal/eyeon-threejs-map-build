@@ -1,12 +1,28 @@
 {
   "name": "eyeon-threejs-map",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "type": "module",
   "source": "src/index.ts",
   "main": "dist/index.js",
   "module": "dist/index.module.js",
   "unpkg": "dist/index.umd.js",
   "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.module.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./index.css": "./dist/index.css"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
   "engines": {
     "node": "22.20.0",
     "npm": "10.x"
@@ -26,15 +42,7 @@
   "dependencies": {
     "@react-three/drei": "9.80.1",
     "@reduxjs/toolkit": "^2.2.3",
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^16.0.0",
-    "@testing-library/user-event": "^14.5.2",
     "@tweenjs/tween.js": "^21.0.0",
-    "@types/jest": "^27.5.2",
-    "@types/node": "^22.7.4",
-    "@types/react": "^19.0.0",
-    "@types/react-dom": "^19.0.0",
-    "@types/three": "^0.156.0",
     "axios": "^1.7.2",
     "bootstrap": "^5.3.1",
     "ngraph.graph": "^20.0.1",
@@ -56,12 +64,20 @@
   },
   "devDependencies": {
     "@react-three/fiber": "^9.0.0",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^16.0.0",
+    "@testing-library/user-event": "^14.5.2",
     "@storybook/addon-docs": "^9.1.8",
     "@storybook/addon-links": "^9.1.8",
     "@storybook/addon-onboarding": "^9.1.8",
     "@storybook/react": "^9.1.8",
     "@storybook/react-vite": "^9.1.8",
     "@storybook/testing-library": "^0.2.2",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^22.7.4",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@types/three": "^0.156.0",
     "@vitejs/plugin-react": "^4.3.1",
     "eslint-plugin-storybook": "^9.1.8",
     "husky": "^8.0.3",
