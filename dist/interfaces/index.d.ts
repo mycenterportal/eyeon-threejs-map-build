@@ -1,4 +1,4 @@
-import { Color, Material, Mesh, MeshLambertMaterial, ShapeGeometry, Vector3 } from 'three';
+import { Color, Intersection, Material, Mesh, MeshLambertMaterial, Object3D, ShapeGeometry, Vector3 } from 'three';
 import { Graph } from 'ngraph.graph';
 import { MapResponsiveSettings } from './mapApiTypes';
 export type MapMode = 'view' | 'edit';
@@ -85,8 +85,8 @@ export interface IExtMesh extends Mesh {
 export interface IExtShapeGeometry extends ShapeGeometry {
     faces: Vector3[];
 }
-export interface ExIntersection extends THREE.Intersection {
-    eventObject: THREE.Object3D | IExtMesh;
+export interface ExIntersection extends Intersection {
+    eventObject: Object3D | IExtMesh;
 }
 export interface ZoomData {
     direction: 'in' | 'out';
