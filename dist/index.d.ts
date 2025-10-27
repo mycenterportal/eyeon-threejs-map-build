@@ -1,4 +1,4 @@
-import { default as MapBox, MapBoxRefProps } from './MapBox';
+import { default as MapBox, MapBoxRefProps, AppProps } from './MapBox';
 export type { MapConfigProps } from './interfaces';
 export { MapBox };
-export type { MapBoxRefProps };
+export type { MapBoxRefProps, AppProps };
