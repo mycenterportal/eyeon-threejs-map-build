@@ -9640,6 +9640,7 @@ const {
     // server baseURL
     timeout: 3e4,
     // Set the request timeout in milliseconds
+    withCredentials: !0,
     headers: {
       "Content-Type": "application/json",
       center_id: l
