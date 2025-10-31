@@ -1,6 +1,6 @@
 {
   "name": "eyeon-threejs-map",
-  "version": "1.0.22",
+  "version": "1.0.23",
   "type": "module",
   "source": "src/index.ts",
   "main": "dist/index.js",
@@ -57,13 +57,13 @@
     "web-vitals": "^2.1.4"
   },
   "peerDependencies": {
-    "@react-three/fiber": "^9.0.0",
-    "react": "19.2.x",
-    "react-dom": "19.2.x",
+    "@react-three/fiber": "^9.4.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
     "three": "^0.180.0"
   },
   "devDependencies": {
-    "@react-three/fiber": "^9.0.0",
+    "@react-three/fiber": "^9.4.0",
     "@storybook/addon-docs": "^9.1.8",
     "@storybook/addon-links": "^9.1.8",
     "@storybook/addon-onboarding": "^9.1.8",
