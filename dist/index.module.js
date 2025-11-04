@@ -9640,7 +9640,7 @@ const {
     headers: {
       "Content-Type": "application/json"
     },
-    params: l.ROLE === "PORTAL" ? {
+    params: l.ROLE === "PORTAL" || l.ROLE === "PORTAL_RESPONSIVE" ? {
       center_id: l.CENTER_ID
     } : void 0
   }, r = B1.create(t), n = (c) => {
