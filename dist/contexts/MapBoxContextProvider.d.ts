@@ -8,7 +8,6 @@ import { MapObjData, MapRetailer, MapAllDataResponse, MapKiosk } from '../interf
 import { AppFloor } from '../interfaces/mapbox';
 import { ApiServicesProps } from '../services/index.service';
 export interface MapBoxContextType {
-    apiBaseUrl: string;
     refetchMapData: () => void;
     apiServices: ApiServicesProps;
     loading: boolean;
