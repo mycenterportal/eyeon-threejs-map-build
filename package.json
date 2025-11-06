@@ -1,12 +1,18 @@
 {
   "name": "eyeon-threejs-map",
-  "version": "1.0.25",
+  "version": "1.0.26",
   "type": "module",
   "source": "src/index.ts",
   "main": "dist/index.js",
   "module": "dist/index.module.js",
   "unpkg": "dist/index.umd.js",
   "types": "dist/index.d.ts",
+  "engines": {
+    "node": "^22.20.0",
+    "npm": "^11.6.2"
+  },
+  "engineStrict": true,
+  "packageManager": "npm@11.6.2",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -23,12 +29,6 @@
   "sideEffects": [
     "**/*.css"
   ],
-  "engines": {
-    "node": "22.20.0",
-    "npm": "10.x"
-  },
-  "engineStrict": true,
-  "packageManager": "npm@10.9.3",
   "scripts": {
     "build": "vite build --mode lib",
     "dev": "vite",
