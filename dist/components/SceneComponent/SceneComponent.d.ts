@@ -5,10 +5,10 @@ interface SceneComponentProps {
     selectedActiveObjectId: string;
     setSelectedActiveObjectId: React.Dispatch<React.SetStateAction<string>>;
     onMapDataUpdate?: (data: MapObjData[]) => void;
-    onSubmit?: (data: MapObjData, refreshData?: () => void) => void;
-    onResetData?: (data: MapObjData) => void;
-    onChangeData?: (data: MapObjData) => void;
-    onNewData?: (data: MapObjData) => void;
+    onObjectSaveData?: (data: MapObjData, refreshData?: () => void) => void;
+    onObjectResetData?: (data: MapObjData) => void;
+    onObjectChangeData?: (data: MapObjData) => void;
+    onObjectNewData?: (data: MapObjData) => void;
     onChangeCameraControlPosition?: (mapResponsiveSetings: MapResponsiveSettings, cameraControlPos: MapCameraControlsState, floorId: number | null) => void;
     onExtractedAmenities?: (amenityIds: MapAmenityID[]) => void;
     handleClickOnRetailer?: (retailer_id: number) => void;

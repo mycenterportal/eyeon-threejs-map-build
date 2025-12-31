@@ -5,10 +5,10 @@ interface PortalSidebarFormProps {
     meshFloors: MeshFloorsProps;
     setData: (index: number, data: MapObjData) => void;
     selectedId: string;
-    onSubmit?: (data: MapObjData, refreshData?: () => void) => void;
-    onResetData?: (data: MapObjData) => void;
-    onChangeData?: (data: MapObjData) => void;
-    onNewData?: (data: MapObjData) => void;
+    onObjectSaveData?: (data: MapObjData, refreshData?: () => void) => void;
+    onObjectResetData?: (data: MapObjData) => void;
+    onObjectChangeData?: (data: MapObjData) => void;
+    onObjectNewData?: (data: MapObjData) => void;
     triggerSceneUpdate: Function;
 }
 declare const PortalSidebarForm: (params: PortalSidebarFormProps) => import("react/jsx-runtime").JSX.Element | null;

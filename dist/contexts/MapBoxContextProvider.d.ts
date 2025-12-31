@@ -10,8 +10,6 @@ import { ApiServicesProps } from '../services/index.service';
 export interface MapBoxContextType {
     refetchMapData: () => void;
     apiServices: ApiServicesProps;
-    loading: boolean;
-    setLoading: Dispatch<SetStateAction<boolean>>;
     initialFloorsDataIsLoaded: boolean;
     setInitialFloorsDataIsLoaded: Dispatch<SetStateAction<boolean>>;
     mapConfig: MapConfigProps;
@@ -54,8 +52,10 @@ export interface ProviderInitialData {
 interface MapBoxContextProviderProps {
     children: ReactNode;
     initialData: ProviderInitialData;
-    mapApiResponseRef?: React.MutableRefObject<MapAllDataResponse | null>;
+    mapApiResponseRef?: React.RefObject<MapAllDataResponse | null> | null;
+    cachedMapApiResponse?: MapAllDataResponse | null;
+    onNewMapApiResponse?: (mapApiResponse: MapAllDataResponse) => void;
 }
-declare const MapBoxContextProvider: ({ children, initialData, mapApiResponseRef }: MapBoxContextProviderProps) => import("react/jsx-runtime").JSX.Element;
+declare const MapBoxContextProvider: ({ children, initialData, mapApiResponseRef, cachedMapApiResponse, onNewMapApiResponse }: MapBoxContextProviderProps) => import("react/jsx-runtime").JSX.Element;
 export declare function useMapBoxContext(): MapBoxContextType;
 export default MapBoxContextProvider;
