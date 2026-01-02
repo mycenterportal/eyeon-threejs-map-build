@@ -1,6 +1,22 @@
 {
-  "name": "eyeon-threejs-map",
-  "version": "1.1.0",
+  "name": "@eyeon/threejs-map",
+  "version": "1.1.1",
+  "description": "EyeOn ThreeJS Map component for interactive 3D mall/center maps",
+  "keywords": [
+    "threejs",
+    "react",
+    "3d",
+    "map",
+    "interactive",
+    "mall",
+    "retail"
+  ],
+  "author": "EyeOn LLC",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mycenterportal/eyeon-threejs-map-build.git"
+  },
   "type": "module",
   "source": "src/index.ts",
   "main": "dist/index.js",
