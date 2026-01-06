@@ -1,6 +1,6 @@
 {
   "name": "@eyeon/threejs-map",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "description": "EyeOn ThreeJS Map component for interactive 3D mall/center maps",
   "keywords": [
     "threejs",
