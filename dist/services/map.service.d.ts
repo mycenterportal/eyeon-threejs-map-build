@@ -3,7 +3,7 @@ import { MapConfigProps } from '../interfaces';
 import { MapResponsiveSettings, MapObjData, MapFloor, MapKiosk } from '../interfaces/mapApiTypes';
 export interface MapApiService {
     getMapData: () => Promise<MapObjData[]>;
-    getMapFloors: () => Promise<MapFloor[]>;
+    getMapFloors: (mapConfig: MapConfigProps) => Promise<MapFloor[]>;
     getMapKiosks: () => Promise<MapKiosk[]>;
     getMapSettings: () => Promise<{
         apiResponse: any;
